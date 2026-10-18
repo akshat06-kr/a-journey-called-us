@@ -81,37 +81,38 @@ export const DongargarhAtmosphere: React.FC<DongargarhAtmosphereProps> = ({ isAc
   if (!isActive) return null;
 
   return (
-    <div
-      className="fixed inset-0 pointer-events-none z-5 transition-opacity duration-1000 ease-in-out"
-      style={{ opacity: isActive ? 1 : 0 }}
-      aria-hidden="true"
-    >
-      {/* Misty Mountain Environmental Lighting Gradient */}
+    <>
+      {/* Environmental Misty Mountain Lighting Gradient & Low Clouds */}
       <div
-        className="absolute inset-0"
-        style={{
-          background:
-            'radial-gradient(circle at 50% 25%, rgba(29, 59, 47, 0.45) 0%, rgba(16, 42, 35, 0.6) 50%, rgba(9, 23, 18, 0.7) 100%)',
-        }}
-      />
+        className="fixed inset-0 pointer-events-none z-5 transition-opacity duration-1000 ease-in-out"
+        style={{ opacity: isActive ? 1 : 0 }}
+        aria-hidden="true"
+      >
+        <div
+          className="absolute inset-0"
+          style={{
+            background:
+              'radial-gradient(circle at 50% 25%, rgba(29, 59, 47, 0.35) 0%, rgba(16, 42, 35, 0.5) 50%, rgba(9, 23, 18, 0.65) 100%)',
+          }}
+        />
+        <div
+          className="absolute inset-x-0 bottom-0 h-96 opacity-35"
+          style={{
+            background:
+              'linear-gradient(to top, rgba(167, 185, 166, 0.25) 0%, rgba(29, 59, 47, 0.15) 50%, transparent 100%)',
+            filter: 'blur(30px)',
+          }}
+        />
+      </div>
 
-      {/* Rolling Low Cloud / Mist Layer */}
-      <div
-        className="absolute inset-x-0 bottom-0 h-96 opacity-35"
-        style={{
-          background:
-            'linear-gradient(to top, rgba(167, 185, 166, 0.25) 0%, rgba(29, 59, 47, 0.15) 50%, transparent 100%)',
-          filter: 'blur(30px)',
-        }}
-      />
-
-      {/* Gentle Rain Canvas */}
+      {/* Gentle Rain Canvas (Gracefully falling across all pages) */}
       {!reducedMotion && (
         <canvas
           ref={canvasRef}
-          className="absolute inset-0 w-full h-full pointer-events-none"
+          className="fixed inset-0 w-full h-full pointer-events-none z-20"
+          aria-hidden="true"
         />
       )}
-    </div>
+    </>
   );
 };

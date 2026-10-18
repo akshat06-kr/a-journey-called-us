@@ -33,12 +33,8 @@ export function App() {
   const currentChapter = storyChapters[activeChapterIndex >= 0 ? activeChapterIndex : 0];
   const currentPhotoUrl = currentChapter?.photoUrl;
 
-  // Dongargarh atmosphere active during Dongargarh chapters
-  const isDongargarhAtmosphere =
-    view === 'story' &&
-    (currentChapter?.atmosphere === 'misty-rain' ||
-      currentChapter?.id === 'chapter-04' ||
-      currentChapter?.id === 'chapter-06');
+  // Rain atmosphere active across all pages (chapters, letter, and landing)
+  const isRainAtmosphere = true;
 
   // Synchronize state from browser back/forward buttons (hashchange)
   useEffect(() => {
@@ -135,8 +131,8 @@ export function App() {
         />
       )}
 
-      {/* 4. Dongargarh Misty Rain Atmosphere (Active on Dongargarh chapters) */}
-      <DongargarhAtmosphere isActive={isDongargarhAtmosphere} />
+      {/* 4. Misty Rain Atmosphere (Active across all pages) */}
+      <DongargarhAtmosphere isActive={isRainAtmosphere} />
 
       {/* 5. Individual Page Views */}
       {view === 'landing' && (
