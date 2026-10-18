@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" width="100%" height="100%">
+  <defs>
+    <!-- Sky Gradient: Dusk Golden Hour to Deep Pine -->
+    <linearGradient id="duskSky" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#091712" />
+      <stop offset="35%" stop-color="#142B22" />
+      <stop offset="70%" stop-color="#2D4A3A" />
+      <stop offset="90%" stop-color="#C9AE7C" stop-opacity="0.85" />
+      <stop offset="100%" stop-color="#E2CFAB" />
+    </linearGradient>
+
+    <!-- Ground Turf Gradient -->
+    <linearGradient id="groundGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1D3B2F" />
+      <stop offset="40%" stop-color="#122920" />
+      <stop offset="100%" stop-color="#091712" />
+    </linearGradient>
+
+    <!-- Sun Glow Radial -->
+    <radialGradient id="sunGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#F5F0E5" stop-opacity="0.9" />
+      <stop offset="25%" stop-color="#C9AE7C" stop-opacity="0.6" />
+      <stop offset="60%" stop-color="#1D3B2F" stop-opacity="0.2" />
+      <stop offset="100%" stop-color="#102A23" stop-opacity="0" />
+    </radialGradient>
+
+    <!-- Mist Blur -->
+    <filter id="mistBlur" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="35" />
+    </filter>
+  </defs>
+
+  <!-- Sky Base -->
+  <rect width="1200" height="750" fill="url(#duskSky)" />
+
+  <!-- Distant Sun Glow setting on horizon -->
+  <circle cx="680" cy="420" r="180" fill="url(#sunGlow)" />
+
+  <!-- Distant Hill Silhouettes -->
+  <path d="M0 450 Q 250 380, 520 420 T 950 390 T 1200 430 L 1200 750 L 0 750 Z" fill="#0D211A" opacity="0.65" />
+  <path d="M0 465 Q 320 410, 680 445 T 1200 435 L 1200 750 L 0 750 Z" fill="#091712" opacity="0.8" />
+
+  <!-- Distant Campus Trees & Pavilion Silhouette -->
+  <g fill="#07130E">
+    <!-- Tree cluster left -->
+    <polygon points="50,470 65,370 80,470" />
+    <polygon points="75,470 95,350 115,470" />
+    <polygon points="105,470 130,360 155,470" />
+    <polygon points="140,470 160,390 180,470" />
+
+    <!-- Campus Pavilion Roof Center -->
+    <polygon points="620,440 680,395 740,440" />
+    <rect x="635" y="440" width="90" height="30" />
+    <line x1="645" y1="440" x2="645" y2="470" stroke="#07130E" stroke-width="3" />
+    <line x1="715" y1="440" x2="715" y2="470" stroke="#07130E" stroke-width="3" />
+
+    <!-- Tree cluster right -->
+    <polygon points="820,465 845,365 870,465" />
+    <polygon points="860,465 885,340 910,465" />
+    <polygon points="900,465 930,355 960,465" />
+    <polygon points="950,465 980,380 1010,465" />
+    <polygon points="1000,465 1030,350 1060,465" />
+    <polygon points="1050,465 1085,330 1120,465" />
+  </g>
+
+  <!-- Golden Mist Layer over Horizon -->
+  <ellipse cx="650" cy="460" rx="550" ry="60" fill="#C9AE7C" opacity="0.25" filter="url(#mistBlur)" />
+
+  <!-- Kho-Kho Sports Ground / Turf Field -->
+  <path d="M0 480 Q 600 465, 1200 480 L 1200 750 L 0 750 Z" fill="url(#groundGrad)" />
+
+  <!-- Ground Subtle Contour Lines & Running Track Glow -->
+  <g stroke="#C9AE7C" stroke-opacity="0.35" stroke-width="2" fill="none">
+    <!-- Oval Track curve -->
+    <ellipse cx="600" cy="620" rx="480" ry="110" stroke-dasharray="8 6" />
+    <ellipse cx="600" cy="620" rx="440" ry="95" stroke-opacity="0.2" />
+
+    <!-- Central Kho-Kho Field Court Markings -->
+    <polygon points="340,590 860,590 890,670 310,670" stroke="#F5F0E5" stroke-opacity="0.4" stroke-width="1.8" />
+    <line x1="600" y1="590" x2="600" y2="670" stroke="#C9AE7C" stroke-opacity="0.5" stroke-width="2" />
+    <!-- Cross Lanes -->
+    <line x1="420" y1="590" x2="400" y2="670" stroke="#F5F0E5" stroke-opacity="0.25" />
+    <line x1="510" y1="590" x2="500" y2="670" stroke="#F5F0E5" stroke-opacity="0.25" />
+    <line x1="690" y1="590" x2="700" y2="670" stroke="#F5F0E5" stroke-opacity="0.25" />
+    <line x1="780" y1="590" x2="800" y2="670" stroke="#F5F0E5" stroke-opacity="0.25" />
+
+    <!-- Poles at Ends of Central Lane -->
+    <circle cx="340" cy="630" r="3.5" fill="#C9AE7C" />
+    <circle cx="860" cy="630" r="3.5" fill="#C9AE7C" />
+  </g>
+
+  <!-- Foreground Atmospheric Vignette and Golden Fireflies -->
+  <g fill="#F5F0E5" opacity="0.75">
+    <circle cx="280" cy="520" r="2" />
+    <circle cx="450" cy="490" r="1.5" />
+    <circle cx="720" cy="530" r="2.5" />
+    <circle cx="880" cy="500" r="1.5" />
+    <circle cx="630" cy="550" r="3" fill="#C9AE7C" opacity="0.9" />
+    <circle cx="580" cy="480" r="2" fill="#E2CFAB" />
+  </g>
+
+  <!-- Elegant Vignette Rim -->
+  <rect width="1200" height="750" fill="none" stroke="#C9AE7C" stroke-width="1" stroke-opacity="0.2" />
+</svg>

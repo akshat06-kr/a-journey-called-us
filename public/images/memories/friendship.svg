@@ -1,0 +1,136 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" width="100%" height="100%">
+  <defs>
+    <!-- Evening Forest Sky Gradient -->
+    <linearGradient id="friendSky" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#091712" />
+      <stop offset="40%" stop-color="#102A23" />
+      <stop offset="75%" stop-color="#1D3B2F" />
+      <stop offset="100%" stop-color="#264A3B" />
+    </linearGradient>
+
+    <!-- Warm Lantern Glow -->
+    <radialGradient id="lanternGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFF5D6" stop-opacity="1" />
+      <stop offset="30%" stop-color="#C9AE7C" stop-opacity="0.75" />
+      <stop offset="70%" stop-color="#1D3B2F" stop-opacity="0.25" />
+      <stop offset="100%" stop-color="#102A23" stop-opacity="0" />
+    </radialGradient>
+
+    <radialGradient id="lanternGlow2" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#F5F0E5" stop-opacity="0.9" />
+      <stop offset="35%" stop-color="#C9AE7C" stop-opacity="0.5" />
+      <stop offset="100%" stop-color="#091712" stop-opacity="0" />
+    </radialGradient>
+
+    <!-- Cobblestone / Pathway Gradient -->
+    <linearGradient id="pathGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#173428" />
+      <stop offset="60%" stop-color="#10251C" />
+      <stop offset="100%" stop-color="#07130E" />
+    </linearGradient>
+
+    <filter id="softGlow">
+      <feGaussianBlur stdDeviation="15" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Sky Base -->
+  <rect width="1200" height="750" fill="url(#friendSky)" />
+
+  <!-- Stars in upper night sky -->
+  <g fill="#F5F0E5" opacity="0.6">
+    <circle cx="150" cy="80" r="1.5" />
+    <circle cx="280" cy="120" r="1.2" />
+    <circle cx="420" cy="60" r="1.8" />
+    <circle cx="590" cy="110" r="1" />
+    <circle cx="750" cy="70" r="1.5" />
+    <circle cx="890" cy="130" r="1.2" />
+    <circle cx="1020" cy="90" r="1.8" />
+    <circle cx="1120" cy="150" r="1" />
+  </g>
+
+  <!-- Distant Background Pine Forest Silhouettes -->
+  <path d="M0 440 L 40 370 L 80 440 L 140 340 L 200 440 L 280 320 L 360 440 L 450 350 L 540 440 L 680 330 L 820 440 L 950 310 L 1080 440 L 1200 350 L 1200 750 L 0 750 Z" fill="#0A1813" opacity="0.85" />
+
+  <!-- Midground Campus Walkway Ground -->
+  <path d="M0 460 Q 600 440, 1200 460 L 1200 750 L 0 750 Z" fill="url(#pathGrad)" />
+
+  <!-- Grand Campus Trees Framing Scene (Left & Right) -->
+  <g fill="#07130E">
+    <!-- Left Tree Trunk & Organic Canopy -->
+    <path d="M-50 750 Q 80 500, 70 300 Q 150 200, 260 220 Q 340 300, 240 420 Q 180 520, 190 750 Z" opacity="0.95" />
+    <!-- Foliage clusters left -->
+    <circle cx="160" cy="220" r="140" />
+    <circle cx="80" cy="280" r="110" />
+    <circle cx="280" cy="260" r="100" />
+    <circle cx="340" cy="340" r="75" />
+
+    <!-- Right Tree Canopy -->
+    <path d="M1020 750 Q 1010 520, 1080 380 Q 1150 280, 1250 320 L 1250 750 Z" opacity="0.95" />
+    <circle cx="1060" cy="240" r="150" />
+    <circle cx="940" cy="300" r="100" />
+    <circle cx="1140" cy="280" r="120" />
+  </g>
+
+  <!-- Campus Pathway with Warm Golden Lighting -->
+  <path d="M480 450 L 720 450 L 920 750 L 280 750 Z" fill="#132B21" opacity="0.75" />
+
+  <!-- Lantern Post 1 (Left Fore) -->
+  <g>
+    <!-- Post Shadow -->
+    <ellipse cx="370" cy="625" rx="40" ry="10" fill="#06100C" opacity="0.7" />
+    <!-- Cast Light on Pathway -->
+    <ellipse cx="370" cy="620" rx="140" ry="60" fill="url(#lanternGlow)" opacity="0.6" />
+
+    <!-- Post Pole -->
+    <line x1="370" y1="620" x2="370" y2="380" stroke="#06100C" stroke-width="6" />
+    <!-- Lantern Arm & Base -->
+    <path d="M350 400 Q 370 380, 390 400" stroke="#06100C" stroke-width="4" fill="none" />
+    <!-- Lantern Head -->
+    <polygon points="355,400 385,400 380,440 360,440" fill="#06100C" />
+    <!-- Glowing Glass -->
+    <rect x="363" y="405" width="14" height="25" rx="2" fill="#FFF5D6" filter="url(#softGlow)" />
+    <!-- Large Radiant Glow Circle -->
+    <circle cx="370" cy="415" r="90" fill="url(#lanternGlow)" />
+  </g>
+
+  <!-- Campus Bench (Right side under tree) -->
+  <g>
+    <!-- Bench Shadow -->
+    <ellipse cx="820" cy="605" rx="85" ry="16" fill="#06100C" opacity="0.75" />
+
+    <!-- Wooden Slats in Deep Pine / Warm Highlight -->
+    <rect x="750" y="540" width="140" height="8" rx="2" fill="#244436" stroke="#0A1813" />
+    <rect x="750" y="552" width="140" height="8" rx="2" fill="#244436" stroke="#0A1813" />
+    <rect x="750" y="564" width="140" height="8" rx="2" fill="#244436" stroke="#0A1813" />
+
+    <!-- Seat Slats -->
+    <polygon points="745,572 895,572 885,584 735,584" fill="#C9AE7C" opacity="0.75" />
+    <polygon points="742,584 892,584 880,596 730,596" fill="#244436" />
+
+    <!-- Cast Iron Bench Legs -->
+    <path d="M755 572 L 750 610 M 765 572 L 770 610" stroke="#06100C" stroke-width="4" />
+    <path d="M875 572 L 870 610 M 885 572 L 890 610" stroke="#06100C" stroke-width="4" />
+
+    <!-- Subtle Golden Light on Bench from Lantern -->
+    <ellipse cx="800" cy="565" rx="60" ry="25" fill="#C9AE7C" opacity="0.15" />
+  </g>
+
+  <!-- Floating Warm Amber Bokeh & Fireflies -->
+  <g fill="#FFF5D6">
+    <circle cx="480" cy="470" r="4" opacity="0.5" />
+    <circle cx="530" cy="430" r="2.5" opacity="0.7" />
+    <circle cx="640" cy="490" r="3.5" opacity="0.6" />
+    <circle cx="710" cy="410" r="2" opacity="0.8" />
+    <circle cx="780" cy="520" r="3" opacity="0.4" />
+    <circle cx="320" cy="510" r="3" opacity="0.6" fill="#C9AE7C" />
+    <circle cx="410" cy="570" r="2" opacity="0.9" fill="#FFF5D6" />
+  </g>
+
+  <!-- Elegant Vignette Rim -->
+  <rect width="1200" height="750" fill="none" stroke="#C9AE7C" stroke-width="1" stroke-opacity="0.2" />
+</svg>

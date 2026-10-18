@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" width="100%" height="100%">
+  <defs>
+    <!-- Dawn Sunrise Sky Gradient: Warm Champagne to Soft Sage -->
+    <linearGradient id="dawnSky" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0E211A" />
+      <stop offset="35%" stop-color="#1B382D" />
+      <stop offset="65%" stop-color="#4E6857" />
+      <stop offset="85%" stop-color="#C9AE7C" />
+      <stop offset="100%" stop-color="#F5F0E5" />
+    </linearGradient>
+
+    <!-- Rising Sun Radiant Disc -->
+    <radialGradient id="risingSun" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="1" />
+      <stop offset="25%" stop-color="#F5F0E5" stop-opacity="0.85" />
+      <stop offset="55%" stop-color="#C9AE7C" stop-opacity="0.45" />
+      <stop offset="100%" stop-color="#1B382D" stop-opacity="0" />
+    </radialGradient>
+
+    <!-- Highway Leading into Sunrise -->
+    <linearGradient id="highwayGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#C9AE7C" stop-opacity="0.7" />
+      <stop offset="25%" stop-color="#284437" />
+      <stop offset="70%" stop-color="#142B21" />
+      <stop offset="100%" stop-color="#0A1813" />
+    </linearGradient>
+
+    <filter id="morningMist">
+      <feGaussianBlur stdDeviation="30" />
+    </filter>
+  </defs>
+
+  <!-- Sky Base -->
+  <rect width="1200" height="750" fill="url(#dawnSky)" />
+
+  <!-- Rising Sun on the Mountain Pass -->
+  <circle cx="600" cy="380" r="220" fill="url(#risingSun)" />
+
+  <!-- Distant Mountain Ranges bathed in morning light -->
+  <path d="M0 430 Q 300 340, 600 390 Q 900 330, 1200 420 L 1200 520 L 0 520 Z" fill="#244436" opacity="0.8" />
+  <path d="M0 450 Q 250 380, 520 420 T 1200 440 L 1200 560 L 0 560 Z" fill="#173428" opacity="0.9" />
+
+  <!-- Morning Sage-Green Fog flowing through valleys -->
+  <ellipse cx="600" cy="420" rx="550" ry="50" fill="#A7B9A6" opacity="0.35" filter="url(#morningMist)" />
+  <ellipse cx="500" cy="450" rx="420" ry="40" fill="#F5F0E5" opacity="0.25" filter="url(#morningMist)" />
+
+  <!-- Mountain Valley Slopes and Morning Pines -->
+  <g fill="#0D211A">
+    <!-- Left Valley Ridge -->
+    <path d="M0 480 Q 280 490, 480 540 L 480 750 L 0 750 Z" />
+    <polygon points="60,490 85,390 110,490" />
+    <polygon points="120,505 150,380 180,505" />
+    <polygon points="190,520 220,410 250,520" />
+    <polygon points="270,535 305,420 340,535" />
+
+    <!-- Right Valley Ridge -->
+    <path d="M1200 480 Q 920 490, 720 540 L 720 750 L 1200 750 Z" />
+    <polygon points="1090,490 1115,390 1140,490" />
+    <polygon points="1020,505 1050,380 1080,505" />
+    <polygon points="950,520 980,410 1010,520" />
+    <polygon points="860,535 895,420 930,535" />
+  </g>
+
+  <!-- Straight Highway Leading Toward Sunrise Horizon -->
+  <polygon points="575,410 625,410 760,750 440,750" fill="url(#highwayGrad)" />
+
+  <!-- Center Highway Golden Road Line -->
+  <polygon points="598,410 602,410 606,750 594,750" fill="#F5F0E5" opacity="0.8" />
+  <!-- Side Highway Guardrails & Road Shoulders with golden reflections -->
+  <line x1="575" y1="410" x2="440" y2="750" stroke="#C9AE7C" stroke-width="2" stroke-opacity="0.4" />
+  <line x1="625" y1="410" x2="760" y2="750" stroke="#C9AE7C" stroke-width="2" stroke-opacity="0.4" />
+
+  <!-- Sun Golden Light Stream reflecting down the road -->
+  <polygon points="600,380 510,750 690,750" fill="url(#risingSun)" opacity="0.3" />
+
+  <!-- Gentle Dawn Bird Silhouettes in the Morning Sky -->
+  <g stroke="#0E211A" stroke-width="2" fill="none" opacity="0.6">
+    <path d="M420 220 Q 430 210, 440 220 Q 450 210, 460 220" />
+    <path d="M480 250 Q 488 242, 496 250 Q 504 242, 512 250" />
+    <path d="M445 270 Q 452 263, 459 270 Q 466 263, 473 270" />
+  </g>
+
+  <!-- Luminous Sunrise Light Dust -->
+  <g fill="#FFFFFF" opacity="0.85">
+    <circle cx="590" cy="480" r="2" />
+    <circle cx="615" cy="520" r="2.5" fill="#C9AE7C" />
+    <circle cx="580" cy="560" r="2" />
+    <circle cx="625" cy="610" r="3" fill="#F5F0E5" />
+    <circle cx="595" cy="670" r="2.5" />
+  </g>
+
+  <!-- Elegant Vignette Rim -->
+  <rect width="1200" height="750" fill="none" stroke="#C9AE7C" stroke-width="1" stroke-opacity="0.2" />
+</svg>

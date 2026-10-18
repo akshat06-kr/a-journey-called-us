@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" width="100%" height="100%">
+  <defs>
+    <!-- Sky with God Rays / Sunburst -->
+    <linearGradient id="claritySky" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#091712" />
+      <stop offset="35%" stop-color="#122A21" />
+      <stop offset="70%" stop-color="#264A3B" />
+      <stop offset="85%" stop-color="#C9AE7C" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#F5F0E5" />
+    </linearGradient>
+
+    <!-- Golden Break-through Rays -->
+    <linearGradient id="sunBeam" x1="50%" y1="0%" x2="50%" y2="100%">
+      <stop offset="0%" stop-color="#FFFDF7" stop-opacity="0.65" />
+      <stop offset="40%" stop-color="#C9AE7C" stop-opacity="0.35" />
+      <stop offset="100%" stop-color="#1D3B2F" stop-opacity="0" />
+    </linearGradient>
+
+    <radialGradient id="sunBreak" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFFDF7" stop-opacity="1" />
+      <stop offset="30%" stop-color="#C9AE7C" stop-opacity="0.75" />
+      <stop offset="70%" stop-color="#1D3B2F" stop-opacity="0.25" />
+      <stop offset="100%" stop-color="#102A23" stop-opacity="0" />
+    </radialGradient>
+
+    <filter id="valleyMist">
+      <feGaussianBlur stdDeviation="25" />
+    </filter>
+  </defs>
+
+  <!-- Sky Base -->
+  <rect width="1200" height="750" fill="url(#claritySky)" />
+
+  <!-- Sun Breaking Through Parting Storm Clouds -->
+  <circle cx="620" cy="240" r="180" fill="url(#sunBreak)" />
+
+  <!-- Crepuscular God Rays radiating down into the valley -->
+  <g>
+    <polygon points="620,240 400,680 510,680" fill="url(#sunBeam)" opacity="0.45" />
+    <polygon points="620,240 560,680 690,680" fill="url(#sunBeam)" opacity="0.65" />
+    <polygon points="620,240 730,680 870,680" fill="url(#sunBeam)" opacity="0.5" />
+    <polygon points="620,240 890,680 1020,680" fill="url(#sunBeam)" opacity="0.35" />
+  </g>
+
+  <!-- Dark Parting Storm Clouds (Above) -->
+  <path d="M-50 160 Q 250 80, 520 120 Q 560 160, 600 130 Q 750 90, 1250 140 L 1250 0 L -50 0 Z" fill="#0A1813" opacity="0.9" />
+
+  <!-- Distant Layered Mountain Ranges (Fading into atmospheric haze) -->
+  <path d="M0 430 Q 300 370, 600 410 T 1200 390 L 1200 550 L 0 550 Z" fill="#143026" opacity="0.5" />
+  <path d="M0 460 Q 350 410, 700 450 T 1200 430 L 1200 600 L 0 600 Z" fill="#0E231B" opacity="0.7" />
+
+  <!-- Luminous Golden Fog in the Valley Floor -->
+  <ellipse cx="620" cy="460" rx="480" ry="40" fill="#C9AE7C" opacity="0.25" filter="url(#valleyMist)" />
+  <ellipse cx="480" cy="480" rx="350" ry="35" fill="#FFFDF7" opacity="0.2" filter="url(#valleyMist)" />
+
+  <!-- Foreground Mountain Cliff & Overlook (Left & Bottom) -->
+  <path d="M0 480 Q 200 490, 360 550 Q 520 620, 680 660 L 1200 700 L 1200 750 L 0 750 Z" fill="#07130E" />
+
+  <!-- Cliff Rocks & Textures -->
+  <polygon points="0,520 220,530 350,640 180,750 0,750" fill="#0A1C16" />
+  <polygon points="180,560 380,570 490,680 320,750" fill="#060F0B" />
+
+  <!-- Solitary Wind-swept Pine on Cliff Overlook -->
+  <g fill="#050D0A">
+    <!-- Trunk leaning into view -->
+    <path d="M220 650 Q 235 560, 260 480 Q 285 410, 310 360 L 320 365 Q 295 415, 275 485 Q 250 565, 235 650 Z" />
+    <!-- Foliage Canopies touched by golden light -->
+    <ellipse cx="320" cy="360" rx="55" ry="25" />
+    <ellipse cx="360" cy="385" rx="65" ry="30" />
+    <ellipse cx="290" cy="420" rx="50" ry="22" />
+    <ellipse cx="350" cy="450" rx="60" ry="28" />
+
+    <!-- Rim Light on Pine Branches -->
+    <ellipse cx="325" cy="358" rx="40" ry="12" fill="#C9AE7C" opacity="0.3" />
+    <ellipse cx="365" cy="382" rx="45" ry="14" fill="#C9AE7C" opacity="0.25" />
+  </g>
+
+  <!-- Golden Light Wash over Foreground Cliff Edge -->
+  <path d="M190 535 Q 320 560, 480 645" stroke="#C9AE7C" stroke-width="2.5" stroke-opacity="0.5" fill="none" />
+
+  <!-- Floating Warm Amber Light Sparks -->
+  <g fill="#FFFDF7">
+    <circle cx="580" cy="380" r="2.5" opacity="0.8" />
+    <circle cx="670" cy="420" r="3" opacity="0.9" fill="#C9AE7C" />
+    <circle cx="730" cy="360" r="2" opacity="0.7" />
+    <circle cx="820" cy="450" r="2.5" opacity="0.6" fill="#F5F0E5" />
+    <circle cx="490" cy="410" r="1.8" opacity="0.75" />
+  </g>
+
+  <!-- Elegant Vignette Rim -->
+  <rect width="1200" height="750" fill="none" stroke="#C9AE7C" stroke-width="1" stroke-opacity="0.2" />
+</svg>

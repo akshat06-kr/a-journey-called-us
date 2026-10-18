@@ -1,0 +1,103 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" width="100%" height="100%">
+  <defs>
+    <!-- Monsoon Storm Sky Gradient -->
+    <linearGradient id="monsoonSky" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#06120E" />
+      <stop offset="30%" stop-color="#0E211A" />
+      <stop offset="65%" stop-color="#17362B" />
+      <stop offset="100%" stop-color="#224A3B" />
+    </linearGradient>
+
+    <!-- Wet Asphalt Road Gradient with Rain Reflections -->
+    <linearGradient id="wetRoad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#142B22" />
+      <stop offset="40%" stop-color="#0A1813" />
+      <stop offset="80%" stop-color="#10251C" />
+      <stop offset="100%" stop-color="#06100C" />
+    </linearGradient>
+
+    <!-- Headlight / Gold Beam Glow on Wet Road -->
+    <radialGradient id="headlightGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFF5D6" stop-opacity="0.8" />
+      <stop offset="35%" stop-color="#C9AE7C" stop-opacity="0.45" />
+      <stop offset="70%" stop-color="#1D3B2F" stop-opacity="0.15" />
+      <stop offset="100%" stop-color="#091712" stop-opacity="0" />
+    </radialGradient>
+
+    <!-- Mist Blur -->
+    <filter id="cloudMist">
+      <feGaussianBlur stdDeviation="20" />
+    </filter>
+  </defs>
+
+  <!-- Sky Base -->
+  <rect width="1200" height="750" fill="url(#monsoonSky)" />
+
+  <!-- Dense Monsoon Cloud Formations -->
+  <path d="M-50 180 Q 200 90, 480 160 T 980 120 Q 1150 170, 1250 140 L 1250 0 L -50 0 Z" fill="#0A1C16" opacity="0.85" />
+  <path d="M-50 240 Q 300 160, 650 220 T 1250 190 L 1250 0 L -50 0 Z" fill="#122A21" opacity="0.6" />
+
+  <!-- Dongargarh Iconic Peak with Hilltop Temple Silhouette in Distance -->
+  <path d="M480 480 L 600 240 L 720 480 Z" fill="#0A1A14" />
+  <!-- Temple spire / shikhar silhouette atop the peak -->
+  <polygon points="597,240 600,210 603,240" fill="#0A1A14" />
+  <circle cx="600" cy="208" r="2.5" fill="#C9AE7C" />
+  <!-- Golden lantern glow at the temple peak -->
+  <circle cx="600" cy="215" r="18" fill="#C9AE7C" opacity="0.35" filter="url(#cloudMist)" />
+
+  <!-- Surrounding Mountain Ghats & Ridges -->
+  <path d="M0 450 Q 250 320, 500 420 L 700 500 L 0 500 Z" fill="#0D241C" />
+  <path d="M650 490 Q 950 340, 1200 430 L 1200 520 L 650 520 Z" fill="#0A1E17" />
+
+  <!-- Rolling Mountain Clouds / Mist between peaks -->
+  <ellipse cx="600" cy="330" rx="420" ry="45" fill="#A7B9A6" opacity="0.22" filter="url(#cloudMist)" />
+  <ellipse cx="350" cy="380" rx="300" ry="35" fill="#DDE6DD" opacity="0.18" filter="url(#cloudMist)" />
+
+  <!-- Mountain Slopes & Deep Pine Trees -->
+  <g fill="#071510">
+    <polygon points="40,510 60,400 80,510" />
+    <polygon points="80,520 105,420 130,520" />
+    <polygon points="180,530 210,410 240,530" />
+    <polygon points="980,520 1005,410 1030,520" />
+    <polygon points="1060,510 1090,390 1120,510" />
+    <polygon points="1130,520 1155,430 1180,520" />
+  </g>
+
+  <!-- Winding Mountain Highway (Ghat Road) -->
+  <path d="M570 470 Q 640 510, 510 560 T 780 640 T 320 750 L 880 750 Q 720 660, 840 580 T 630 490 T 570 470 Z" fill="url(#wetRoad)" />
+
+  <!-- Center Road Yellow/White Marking Line Winding Down the Ghat -->
+  <path d="M585 475 Q 635 505, 535 550 T 755 625 T 560 750" stroke="#C9AE7C" stroke-width="3" stroke-dasharray="14 10" fill="none" opacity="0.7" />
+
+  <!-- Headlight Beams & Wet Road Reflections -->
+  <ellipse cx="640" cy="670" rx="190" ry="50" fill="url(#headlightGlow)" />
+  <ellipse cx="540" cy="570" rx="100" ry="25" fill="url(#headlightGlow)" opacity="0.6" />
+
+  <!-- Diagonal Monsoon Rain Streaks Over the Valley -->
+  <g stroke="#DDE6DD" stroke-opacity="0.3" stroke-width="1.2">
+    <line x1="120" y1="40" x2="80" y2="180" />
+    <line x1="280" y1="80" x2="240" y2="230" />
+    <line x1="450" y1="30" x2="410" y2="190" />
+    <line x1="620" y1="90" x2="580" y2="250" />
+    <line x1="780" y1="50" x2="740" y2="210" />
+    <line x1="940" y1="70" x2="900" y2="240" />
+    <line x1="1080" y1="40" x2="1040" y2="190" />
+
+    <!-- Mid & Low Rain -->
+    <line x1="190" y1="280" x2="150" y2="440" />
+    <line x1="360" y1="320" x2="320" y2="480" />
+    <line x1="530" y1="360" x2="490" y2="520" />
+    <line x1="720" y1="310" x2="680" y2="490" />
+    <line x1="880" y1="350" x2="840" y2="510" />
+    <line x1="1020" y1="300" x2="980" y2="480" />
+
+    <!-- Foreground Intense Downpour Streaks -->
+    <line x1="240" y1="520" x2="190" y2="720" stroke-opacity="0.45" stroke-width="1.6" />
+    <line x1="480" y1="560" x2="430" y2="740" stroke-opacity="0.5" stroke-width="1.8" />
+    <line x1="710" y1="540" x2="660" y2="730" stroke-opacity="0.45" stroke-width="1.6" />
+    <line x1="920" y1="570" x2="870" y2="750" stroke-opacity="0.5" stroke-width="1.8" />
+  </g>
+
+  <!-- Elegant Vignette Rim -->
+  <rect width="1200" height="750" fill="none" stroke="#C9AE7C" stroke-width="1" stroke-opacity="0.2" />
+</svg>
