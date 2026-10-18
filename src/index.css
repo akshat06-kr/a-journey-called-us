@@ -209,11 +209,11 @@ body {
 
 .story-chapter-section {
   position: relative;
-  min-height: 85vh;
-  padding: 4.5rem 0 3.5rem 0;
+  min-height: auto;
+  padding: 0.25rem 0 0.5rem 0;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   z-index: 10;
 }
 
@@ -296,16 +296,16 @@ body {
 
 /* Chapter Photo Container */
 .chapter-photo-frame {
-  margin-top: 2.5rem;
-  margin-bottom: 2rem;
+  margin-top: 0.75rem;
+  margin-bottom: 0.25rem;
   border-radius: 1rem;
   overflow: hidden;
   border: 1px solid rgba(201, 174, 124, 0.3);
   background: rgba(16, 42, 35, 0.65);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.6);
-  padding: 0.6rem;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+  padding: 0.45rem;
   transition: all 0.4s var(--ease-cinematic);
 }
 
@@ -339,12 +339,12 @@ body {
 .chapter-photo-caption {
   font-family: var(--font-serif);
   font-style: italic;
-  font-size: 0.95rem;
+  font-size: 0.92rem;
   letter-spacing: 0.02em;
   color: var(--color-warm-ivory);
   opacity: 0.9;
   text-align: center;
-  padding: 0.85rem 1rem 0.35rem 1rem;
+  padding: 0.45rem 0.75rem 0.15rem 0.75rem;
 }
 
 /* Gold separator between chapters */
@@ -353,7 +353,7 @@ body {
   max-width: 420px;
   height: 1px;
   background: linear-gradient(90deg, transparent 0%, rgba(201, 174, 124, 0.4) 50%, transparent 100%);
-  margin: 4.5rem auto 1.5rem auto;
+  margin: 1.25rem auto 0.75rem auto;
 }
 
 /* =========================================================================
@@ -418,27 +418,27 @@ body {
   transform: translateY(-2px);
 }
 
-/* Identical Sized Bottom Pagination Buttons with Shimmer & Glow Effects */
+/* Identical Sized Bottom Pagination Buttons with Shimmer & Glow Effects (Slightly more compact & refined) */
 .pagination-btn {
   position: relative;
   overflow: hidden;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  height: 56px;
-  min-height: 56px;
-  max-height: 56px;
-  width: 240px;
-  min-width: 240px;
-  max-width: 240px;
-  padding: 0 1.25rem;
+  height: 44px;
+  min-height: 44px;
+  max-height: 44px;
+  width: 195px;
+  min-width: 195px;
+  max-width: 195px;
+  padding: 0 1rem;
   border-radius: 9999px;
   border: 1px solid rgba(201, 174, 124, 0.45);
   background: linear-gradient(135deg, rgba(16, 42, 35, 0.92) 0%, rgba(9, 23, 18, 0.98) 100%);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   color: var(--color-warm-ivory);
-  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.15);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.15);
   cursor: pointer;
   transition: all 0.35s cubic-bezier(0.22, 1, 0.36, 1);
   text-decoration: none;
@@ -470,16 +470,16 @@ body {
 }
 
 .pagination-btn:hover {
-  transform: translateY(-3px);
+  transform: translateY(-2px);
   border-color: var(--color-champagne-gold);
   background: linear-gradient(135deg, rgba(29, 59, 47, 0.98) 0%, rgba(16, 42, 35, 1) 100%);
-  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.65), 0 0 24px rgba(201, 174, 124, 0.38), inset 0 1px 0 rgba(255, 255, 255, 0.25);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.6), 0 0 20px rgba(201, 174, 124, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.25);
   color: #FFFFFF;
 }
 
 .pagination-btn:active {
   transform: translateY(0) scale(0.97);
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
 }
 
 @media (max-width: 639px) {
@@ -487,9 +487,10 @@ body {
     width: 100%;
     min-width: 0;
     max-width: 100%;
-    height: 54px;
-    min-height: 54px;
-    max-height: 54px;
+    height: 42px;
+    min-height: 42px;
+    max-height: 42px;
+    padding: 0 0.75rem;
   }
 }
 
@@ -595,7 +596,7 @@ body {
   border-radius: 6px;
   position: relative;
   max-width: 680px;
-  margin: 0 auto;
+  margin: 0 auto 1.5rem auto;
 }
 
 /* Floating animation */
@@ -687,6 +688,8 @@ body {
   align-items: center;
   justify-content: center;
   margin-inline: auto;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
 .milestone-timeline-container {
@@ -708,6 +711,7 @@ body {
   align-items: center;
   justify-content: center;
   margin-inline: auto;
+  margin-bottom: 0.75rem;
 }
 
 .milestone-track-wrapper {
@@ -715,6 +719,7 @@ body {
   width: 100%;
   max-width: 48rem; /* 768px */
   margin-inline: auto;
+  margin-top: 0.25rem;
 }
 
 .milestone-grid {

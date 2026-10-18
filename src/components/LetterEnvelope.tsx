@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { finalLetter } from '../data/letter';
-import { Mail, RotateCcw, ArrowUp, FastForward, ChevronLeft, Home, Sparkles, Heart } from 'lucide-react';
+import { Mail, RotateCcw, ArrowUp, FastForward, Sparkles, Heart } from 'lucide-react';
 import confetti from 'canvas-confetti';
 
 interface LetterEnvelopeProps {
@@ -75,8 +75,8 @@ const renderParagraphContent = (text: string) => {
 
 export const LetterEnvelope: React.FC<LetterEnvelopeProps> = ({
   onRevisitJourney,
-  onReturnToChapter,
-  onReturnToLanding,
+  onReturnToChapter: _onReturnToChapter,
+  onReturnToLanding: _onReturnToLanding,
 }) => {
   // Opening states: 'closed' | 'opening' | 'opened'
   const [stage, setStage] = useState<'closed' | 'opening' | 'opened'>('closed');
@@ -130,7 +130,7 @@ export const LetterEnvelope: React.FC<LetterEnvelopeProps> = ({
       style={{
         position: 'relative',
         minHeight: '100vh',
-        padding: '3rem 1.25rem 6rem 1.25rem',
+        padding: '1.25rem 1rem 3rem 1rem',
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
@@ -149,31 +149,6 @@ export const LetterEnvelope: React.FC<LetterEnvelopeProps> = ({
         <div className="letter-sparkle w-2.5 h-2.5 top-[55%] right-[8%] [animation-delay:0.8s]" />
         <div className="letter-sparkle w-1.5 h-1.5 top-[70%] left-[6%] [animation-delay:2.4s]" />
         <div className="letter-sparkle w-2 h-2 top-[84%] right-[12%] [animation-delay:4s]" />
-      </div>
-
-      {/* Top Navigation Bar on Letter Page */}
-      <div className="w-full max-w-3xl mb-8 flex items-center justify-between z-30">
-        {onReturnToChapter && (
-          <button
-            onClick={onReturnToChapter}
-            className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-[#102A23]/80 hover:bg-[#1D3B2F] border border-[#C9AE7C]/30 text-xs font-sans tracking-wider uppercase text-[#A7B9A6] hover:text-[#F5F0E5] transition-all cursor-pointer shadow-md"
-            aria-label="Return to previous chapter"
-          >
-            <ChevronLeft className="w-3.5 h-3.5 text-[#C9AE7C]" />
-            <span>Back to Journey</span>
-          </button>
-        )}
-
-        {onReturnToLanding && (
-          <button
-            onClick={onReturnToLanding}
-            className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-[#102A23]/80 hover:bg-[#1D3B2F] border border-[#C9AE7C]/30 text-xs font-sans tracking-wider uppercase text-[#A7B9A6] hover:text-[#F5F0E5] transition-all cursor-pointer shadow-md ml-auto"
-            aria-label="Return to cover page"
-          >
-            <Home className="w-3.5 h-3.5 text-[#C9AE7C]" />
-            <span>Intro</span>
-          </button>
-        )}
       </div>
 
       {/* Section Header */}
@@ -263,28 +238,28 @@ export const LetterEnvelope: React.FC<LetterEnvelopeProps> = ({
             <div className="absolute -inset-2 bg-[#C9AE7C]/25 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
           </div>
 
-          {/* Controls below envelope */}
-          <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
+          {/* Controls below envelope (In a row on mobile and desktop) */}
+          <div className="mt-8 sm:mt-12 flex flex-row items-center justify-center gap-2 sm:gap-3.5 w-full max-w-[440px] px-2">
             <button
               onClick={handleOpenLetter}
               disabled={stage === 'opening'}
-              className="pagination-btn group flex items-center justify-center gap-2.5"
+              className="pagination-btn flex-1 sm:flex-none group flex items-center justify-center gap-1.5 sm:gap-2 px-2 sm:px-4"
               aria-label="Open the letter"
             >
-              <Mail className="w-4 h-4 text-[#C9AE7C] group-hover:rotate-12 group-hover:scale-110 transition-transform duration-300 shrink-0" />
-              <span className="font-sans text-xs uppercase tracking-widest font-semibold text-[#F5F0E5]">
-                {stage === 'opening' ? 'Opening...' : 'Open the Letter ✉'}
+              <Mail className="w-3.5 h-3.5 text-[#C9AE7C] group-hover:rotate-12 group-hover:scale-110 transition-transform duration-300 shrink-0" />
+              <span className="font-sans text-[10.5px] sm:text-[11.5px] uppercase tracking-wider font-semibold text-[#F5F0E5] whitespace-nowrap">
+                {stage === 'opening' ? 'Opening...' : 'Open Letter ✉'}
               </span>
             </button>
 
             <button
               onClick={handleSkipAnimation}
-              className="pagination-btn group flex items-center justify-center gap-2.5"
+              className="pagination-btn flex-1 sm:flex-none group flex items-center justify-center gap-1.5 sm:gap-2 px-2 sm:px-4"
               title="Skip animation and read immediately"
               aria-label="Skip animation and read immediately"
             >
-              <FastForward className="w-4 h-4 text-[#C9AE7C] group-hover:translate-x-1.5 transition-transform duration-300 shrink-0" />
-              <span className="font-sans text-xs uppercase tracking-widest font-semibold text-[#F5F0E5]">
+              <FastForward className="w-3.5 h-3.5 text-[#C9AE7C] group-hover:translate-x-1.5 transition-transform duration-300 shrink-0" />
+              <span className="font-sans text-[10.5px] sm:text-[11.5px] uppercase tracking-wider font-semibold text-[#F5F0E5] whitespace-nowrap">
                 Skip Animation
               </span>
             </button>
@@ -312,7 +287,7 @@ export const LetterEnvelope: React.FC<LetterEnvelopeProps> = ({
             )}
           </div>
 
-          <div className="letter-paper px-6 py-10 sm:px-12 sm:py-16 md:px-16 md:py-20 rounded-2xl relative transition-all duration-500 animate-fadeIn">
+          <div className="letter-paper px-6 pt-10 pb-16 sm:px-12 sm:pt-16 sm:pb-24 md:px-16 md:pt-20 md:pb-28 rounded-2xl relative mb-12 sm:mb-16 transition-all duration-500 animate-fadeIn">
             {/* Inner Gold Foil Frame */}
             <div className="letter-inner-frame" />
 
@@ -439,7 +414,7 @@ export const LetterEnvelope: React.FC<LetterEnvelopeProps> = ({
                   — {finalLetter.author}
                 </span>
                 {finalLetter.date && (
-                  <span className="font-editorial text-xs font-semibold tracking-[0.28em] uppercase text-[#9B7C3E] mt-1">
+                  <span className="font-editorial text-xs font-semibold tracking-[0.28em] uppercase text-[#9B7C3E] mt-2 mb-2 inline-block">
                     {finalLetter.date}
                   </span>
                 )}
@@ -447,26 +422,29 @@ export const LetterEnvelope: React.FC<LetterEnvelopeProps> = ({
             </div>
           </div>
 
-          {/* Action Options after Letter Opens */}
-          <div className="mt-12 flex flex-wrap items-center justify-center gap-4 z-20">
+          {/* Action Options after Letter Opens (In a horizontal row on mobile and desktop) */}
+          <div
+            className="flex flex-row items-center justify-center gap-2 sm:gap-3.5 w-full max-w-[460px] mx-auto px-2 z-20"
+            style={{ marginTop: '1.75rem', marginBottom: '2rem' }}
+          >
             <button
               onClick={handleReadAgain}
-              className="pagination-btn group flex items-center justify-center gap-2.5"
+              className="pagination-btn flex-1 sm:flex-none group flex items-center justify-center gap-1.5 sm:gap-2 px-2 sm:px-4"
               aria-label="Fold letter and read again"
             >
-              <RotateCcw className="w-4 h-4 text-[#C9AE7C] group-hover:-rotate-90 transition-transform duration-300 shrink-0" />
-              <span className="font-sans text-xs uppercase tracking-widest font-semibold text-[#F5F0E5]">
+              <RotateCcw className="w-3.5 h-3.5 text-[#C9AE7C] group-hover:-rotate-90 transition-transform duration-300 shrink-0" />
+              <span className="font-sans text-[10px] sm:text-[11px] uppercase tracking-wider font-semibold text-[#F5F0E5] whitespace-nowrap">
                 Read Again
               </span>
             </button>
 
             <button
               onClick={onRevisitJourney}
-              className="pagination-btn group flex items-center justify-center gap-2.5"
+              className="pagination-btn flex-1 sm:flex-none group flex items-center justify-center gap-1.5 sm:gap-2 px-2 sm:px-4"
               aria-label="Revisit our journey from the beginning"
             >
-              <ArrowUp className="w-4 h-4 text-[#C9AE7C] group-hover:-translate-y-1.5 transition-transform duration-300 shrink-0" />
-              <span className="font-sans text-xs uppercase tracking-widest font-semibold text-[#F5F0E5]">
+              <ArrowUp className="w-3.5 h-3.5 text-[#C9AE7C] group-hover:-translate-y-1.5 transition-transform duration-300 shrink-0" />
+              <span className="font-sans text-[10px] sm:text-[11px] uppercase tracking-wider font-semibold text-[#F5F0E5] whitespace-nowrap">
                 Revisit Our Journey
               </span>
             </button>

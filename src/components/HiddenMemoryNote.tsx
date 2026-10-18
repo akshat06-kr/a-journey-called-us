@@ -50,7 +50,7 @@ export const HiddenMemoryNote: React.FC<HiddenMemoryNoteProps> = ({ note }) => {
   };
 
   return (
-    <div className="my-8 w-full max-w-full">
+    <div className="mt-4 mb-2 w-full max-w-full">
       {!isOpen ? (
         /* Collapsed 3D Floating Token (First thing user sees on any new chapter) */
         <div className="flex justify-center sm:justify-start">

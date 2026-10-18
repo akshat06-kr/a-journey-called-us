@@ -27,24 +27,24 @@ export const InteractiveTimeline: React.FC<InteractiveTimelineProps> = ({
 
   return (
     <section
-      className="milestone-timeline-section relative z-20 w-full pt-4 pb-6 px-4 flex flex-col items-center justify-center"
+      className="milestone-timeline-section relative z-20 w-full pt-1 sm:pt-2 pb-2 px-2 sm:px-4 flex flex-col items-center justify-center"
       aria-label="Interactive Story Milestones Timeline"
     >
       {/* Dedicated Centered Content Container */}
       <div className="milestone-timeline-container w-full max-w-4xl mx-auto flex flex-col items-center text-center">
         {/* Centered Heading & Subtitle */}
-        <div className="milestone-header-block w-full text-center mb-7 flex flex-col items-center justify-center">
-          <span className="inline-block text-[11px] font-sans tracking-[0.28em] uppercase text-[#C9AE7C] font-semibold mb-2 text-center">
+        <div className="milestone-header-block w-full text-center mb-1.5 sm:mb-2 flex flex-col items-center justify-center">
+          <span className="inline-block text-[11px] font-sans tracking-[0.28em] uppercase text-[#C9AE7C] font-semibold mb-1 text-center">
             ✦ MILESTONES OF OUR JOURNEY ✦
           </span>
           <h2 className="font-serif italic text-2xl sm:text-3xl md:text-4xl text-[#F5F0E5] tracking-wide leading-snug text-center max-w-2xl mx-auto">
             Select a chapter to revisit that memory
           </h2>
-          <div className="w-16 h-[1.5px] bg-gradient-to-r from-transparent via-[#C9AE7C]/60 to-transparent mx-auto mt-3" />
+          <div className="w-16 h-[1.5px] bg-gradient-to-r from-transparent via-[#C9AE7C]/60 to-transparent mx-auto mt-1.5 mb-0.5" />
         </div>
 
         {/* 6-Milestone Unified Timeline Group (Fits all 6 chapters on mobile and desktop) */}
-        <div className="milestone-track-wrapper relative w-full max-w-3xl mx-auto px-1 sm:px-4">
+        <div className="milestone-track-wrapper relative w-full max-w-3xl mx-auto px-1 sm:px-4 mt-1 sm:mt-2">
           <div className="relative w-full min-w-0">
             {/* Continuous Connecting Line aligned through the centre of all milestone icons */}
             <div

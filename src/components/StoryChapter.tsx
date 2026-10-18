@@ -173,9 +173,6 @@ export const StoryChapter: React.FC<StoryChapterProps> = ({
       {chapter.comparison && (
         <ComparisonSlider comparison={chapter.comparison} />
       )}
-
-      {/* Chapter End Separator */}
-      <div className="separator-gold" />
     </article>
   );
 };
